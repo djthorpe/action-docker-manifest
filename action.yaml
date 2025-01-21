@@ -1,4 +1,3 @@
-# action.yml
 name: 'Create Docker Manifest'
 description: 'Creates a Docker Manifest for the given set of images'
 inputs:

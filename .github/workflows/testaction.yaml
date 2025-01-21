@@ -1,0 +1,22 @@
+on: 
+  workflow_dispatch:
+    inputs:
+      images:
+        description: 'images'
+        required: true
+        default: '[ "image1", "image2" ]'
+        type: string
+      manifest:
+        description: 'manifest'
+        required: true
+        default: 'manifest'
+        type: string  
+jobs:
+  hello_world_job:
+    runs-on: ubuntu-latest
+    name: A job to create a Docker Manifest
+    steps:
+      - uses: djthorpe/action-docker-manifest@v0
+        with:
+          images: ${{ github.event.inputs.images }}
+          manifest: ${{ github.event.inputs.manifest }}
