@@ -1,3 +1,4 @@
+name: Test Docker Action to Create Manifest
 on: 
   workflow_dispatch:
     inputs:
